@@ -1,6 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import PrimaryButton from "@utils/PrimaryButton";
+import Link from "next/link";
 
 const Header = () => {
   const router = useRouter();
@@ -30,27 +31,31 @@ const Header = () => {
 
   return (
     // header begin
-    <div className="w-full flex justify-between items-center text-center h-20 sticky inset-0">
+    <div className="w-full flex container p-4 justify-between items-center text-center h-20 sticky inset-0" style={{ background: "#FAFAFA" }}>
       <span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="90"
-          height="55"
-          viewBox="0 0 90 55"
-        >
-          <text
-            id="Siboria."
-            className="text-2xl font-inter font-bold text-center"
-            fill="#212832"
-          >
-            <tspan x="0" y="23">
-              Siboria
-            </tspan>
-            <tspan y="23" fill="#ff7b29">
-              .
-            </tspan>
-          </text>
-        </svg>
+        <Link href={"/"}>
+          <a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="90"
+              height="55"
+              viewBox="0 0 90 35"
+            >
+              <text
+                id="Siboria."
+                className="text-2xl font-inter font-bold text-center"
+                fill="#212832"
+              >
+                <tspan x="0" y="23">
+                  Siboria
+                </tspan>
+                <tspan y="23" fill="#ff7b29">
+                  .
+                </tspan>
+              </text>
+            </svg>
+          </a>
+        </Link>
       </span>
       <div className="flex items-center gap-8">
         {menus.map((menu) => (
